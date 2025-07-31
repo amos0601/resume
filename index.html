@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Amos</title>
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      padding: 10px 10%;
+      overflow: hidden;
+      background-image: url("coffee-background.jpeg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-attachment: fixed;
+      position: relative;
+    }
+
+    /* 遮罩層 */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body class="home">
+  <!-- 遮罩層 -->
+  <div class="overlay"></div>
+
+  <section id="hero">
+
+    <header>
+      <a class="logo" href="index.html">Amos</a>
+      
+      <!-- 漢堡菜單按鈕 -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      
+      <!-- 側邊欄導航 -->
+      <nav class="nav-bar" id="nav-bar">
+        <a class="nav-items" href="index.html">Home</a>
+        <a class="nav-items" href="about.html">About</a>
+        <a class="nav-items" href="Skills.html">Skills</a>
+        <a class="nav-items" href="Contacts.html">Contacts</a>
+      </nav>
+    </header>
+    </header>
+
+    <div class="hero-content">
+
+      <div class="left-content">
+        <div class="left-content-wrap">
+          <h3>RESUME</h3>
+          <h1>Hi, I'm <span>Amos</span></h1>
+          <p>
+            我是一名熱愛咖啡的愛好者，專注於精品咖啡的沖煮，致力於將每一杯咖啡的風味極致呈現。
+            未來想成為尋豆師探索不同產區的豆子，並分享背後的故事。
+          </p>
+         
+        </div>
+      </div>
+
+      <div class="right-content">
+        
+      </div>
+
+    </div>
+
+   <div class="socials">
+  <a href="https://www.facebook.com/moon.zhan.9/" target="_blank">
+    <i class="fa-brands fa-facebook-f"></i>
+  </a>
+  <a href="https://www.instagram.com/amos.0601/" target="_blank">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://mail.google.com/mail/?view=cm&to=coco29523995@gmail.com" target="_blank">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+
+  </section>
+
+  <script>
+    function toggleMenu() {
+      const navBar = document.getElementById('nav-bar');
+      const hamburger = document.querySelector('.hamburger');
+      navBar.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    // 點擊導航項目後自動關閉菜單
+    document.querySelectorAll('.nav-items').forEach(item => {
+      item.addEventListener('click', () => {
+        const navBar = document.getElementById('nav-bar');
+        const hamburger = document.querySelector('.hamburger');
+        navBar.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+
+</html>

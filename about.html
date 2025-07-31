@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amos</title>
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body class="about">
+  <!-- 頁首 header -->
+  <header>
+    <a class="logo" href="index.html">Amos</a>
+    
+    <!-- 漢堡菜單按鈕 -->
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
+    <!-- 側邊欄導航 -->
+    <nav class="nav-bar" id="nav-bar">
+      <a class="nav-items" href="index.html">Home</a>
+      <a class="nav-items" href="about.html">About</a>
+      <a class="nav-items" href="Skills.html">Skills</a>
+      <a class="nav-items" href="Contacts.html">Contacts</a>
+    </nav>
+  </header>
+
+  <!-- 主要內容 -->
+  <section class="about-main about-row">
+    <div class="about-block">
+      <h2>關於我</h2>
+      <div class="about-content">
+        姓名：詹閔翔<br>
+        生日：2002/06/01<br>
+  
+        興趣：閱讀、攝影、學習、咖啡<br>
+        個人介紹：<br>
+        我是在高中課堂上第一次接觸到咖啡的，由此埋下了一個興趣，
+        而後轉學時剛好要離開原先的工作，
+        因緣際會下找到了一家複合式的書店咖啡廳，
+        在那裡開始了我的咖啡之旅，且完全沈迷了進去，
+        花了大量的時間與心力在咖啡的學習與實踐上，並且第一次參加比賽
+        不只是運氣，這次努力與堅持換來的結果，對我意義很大，
+        也決定了這條道路<br>
+      </div>
+    </div>
+    <div class="about-block">
+      <h2>學歷</h2>
+      <div class="about-content">
+        銘傳大學應用統計與資訊科學學系<br>
+        2020/6～2021/6<br>
+        銘傳大學-財金系<br>
+        2021/8～2022/1<br>
+        輔仁大學-哲學系<br>
+        2022/3～2025/1
+      </div>
+    </div>
+    <div class="about-block">
+      <h2>工作經驗</h2>
+      <div class="about-content">
+      浮光書店(2023/10 — 至今)<br>
+吧台手＆行政:<br>會計和薪資勞保計算的excel程式語言，咖啡
+豆廠商接洽，庫存管理與良率計算，咖啡沖煮和調整<br><br>
+水花婚紗攝影 (2023/1~2023/6)<br>
+攝影助理:<br>基礎攝影、場佈、圖片修圖和與調色、婚禮相本排版<br><br>
+如果花知道(2021/10~2021/12)<br>
+燈光助理:<br>打燈、基礎剪輯、場佈、燈光調整<br>
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 socials -->
+  <div class="socials">
+    <a href="https://www.facebook.com/moon.zhan.9/" target="_blank">
+      <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com/amos.0601/" target="_blank">
+      <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="https://mail.google.com/mail/?view=cm&to=coco29523995@gmail.com" target="_blank">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+  </div>
+
+  <script>
+    function toggleMenu() {
+      const navBar = document.getElementById('nav-bar');
+      const hamburger = document.querySelector('.hamburger');
+      navBar.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    }
+
+    // 點擊導航項目後自動關閉菜單
+    document.querySelectorAll('.nav-items').forEach(item => {
+      item.addEventListener('click', () => {
+        const navBar = document.getElementById('nav-bar');
+        const hamburger = document.querySelector('.hamburger');
+        navBar.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  </script>
+</body>
+</html>
